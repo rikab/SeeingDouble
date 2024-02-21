@@ -5,7 +5,6 @@
 # Standard stuff
 import numpy as np
 from matplotlib import pyplot as plt
-plt.style.use('seaborn-white')
 from matplotlib import cm
 
 # ML stuff
@@ -94,7 +93,6 @@ def load_data(cache_dir, pt_lower, pt_upper, eta, quality, pad, x_dim = 3, momen
         C = C[particle_counts < max_particle_select]
         particle_counts = particle_counts[particle_counts < max_particle_select]
 
-    shuffle_indices = np.random.choice(np.arange(dataset.shape[0]), size = int(dataset.shape[0] * frac), replace=False)
 
     print("X: ", X.shape, X.dtype)
     print("Y: ", Y.shape, Y.dtype)
